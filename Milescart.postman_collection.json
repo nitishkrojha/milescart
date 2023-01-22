@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "a62ee914-bb39-49e3-9ba4-6a7cd4328da0",
+		"name": "Milescart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Nitish Kr Ojha",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mailtonitishk4@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "6203808016",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asdf1234",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "12-01-1996",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "180",
+							"type": "text"
+						},
+						{
+							"key": "login_type",
+							"value": "manual",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "mailtonitishk@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asdf1234",
+							"type": "text"
+						},
+						{
+							"key": "login_type",
+							"value": "manual",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profile?email=mailtonitishk4@gmail.com&access_token=SOt64dC5z5ZSsZphZjaCWzi5JzPzU0VzSQ5b8KQe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mailtonitishk4@gmail.com"
+						},
+						{
+							"key": "access_token",
+							"value": "SOt64dC5z5ZSsZphZjaCWzi5JzPzU0VzSQ5b8KQe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "mailtonitishk4@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "access_token",
+							"value": "SOt64dC5z5ZSsZphZjaCWzi5JzPzU0VzSQ5b8KQe",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Nitish Kr Ojha",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "12-01-1996",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "180",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateProfile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updatePassword?email=mailtonitishk4@gmail.com&access_token=SOt64dC5z5ZSsZphZjaCWzi5JzPzU0VzSQ5b8KQe&current_password=asdf1234&new_password=asdfasdf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updatePassword"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mailtonitishk4@gmail.com"
+						},
+						{
+							"key": "access_token",
+							"value": "SOt64dC5z5ZSsZphZjaCWzi5JzPzU0VzSQ5b8KQe"
+						},
+						{
+							"key": "current_password",
+							"value": "asdf1234"
+						},
+						{
+							"key": "new_password",
+							"value": "asdfasdf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"events"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "active",
+							"disabled": true
+						},
+						{
+							"key": "mode",
+							"value": "paid",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
