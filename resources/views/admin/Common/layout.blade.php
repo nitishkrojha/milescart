@@ -19114,7 +19114,7 @@
 
 
 
-                <?= $this->renderSection('content') ?>
+               @yield('content')
 
 
                 <footer class="layout-footer MuiBox-root css-1s71n78">

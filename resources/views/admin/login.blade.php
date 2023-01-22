@@ -1791,7 +1791,7 @@
                                 <p class="MuiTypography-root MuiTypography-body2 css-4yvesp">Please sign-in to your account and start the adventure</p>
                             </div>
 
-                            <form method="POST" action="{{ route('login-auth')}}">
+                            <form method="POST" action="{{ route('admin.login-auth')}}">
 
                                 @csrf
                                 <div class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-nbxxrn">
@@ -1821,9 +1821,14 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                     @endif
-                                    @if ($errors->has('email'))
+                                    @if(session()->has('message'))
+                                    
+                                   
                                     <span class="invalid-feedback" style="font-weight: bold;font-size: smaller;color:#0082c3">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>
+                                            <!-- {{ $errors->first('email') }} -->
+                                        {{ session()->get('message') }}
+                                        </strong>
                                     </span>
                                     @endif
                                 </div>

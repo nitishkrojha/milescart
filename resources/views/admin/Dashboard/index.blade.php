@@ -1,11 +1,16 @@
-<?= $this->extend('Common/layout') ?>
 
+ 
+@extends('admin/Common/layout')
+
+
+
+@section('content')
 <!--
     Everything between `section()` and `endSection()
     is inserted into the `layout` view where it calls
     `$this->renderSection('content')`.
 -->
-<?= $this->section('content') ?>
+
 
 <main class="layout-page-content css-zyg32b">
     <div class="css-zo3z3e">
@@ -481,4 +486,4 @@
 
 </main>
 
-<?= $this->endSection() ?>
+@endsection

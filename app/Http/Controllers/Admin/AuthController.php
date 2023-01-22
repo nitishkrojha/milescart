@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Mail\ForgotPasswordMail;
+use App\Mail\ForgotPasswordMail; 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
@@ -48,7 +48,8 @@ class AuthController extends Controller
             return redirect()->intended(route('admin.dashboard'));
         }
 
-        return redirect()->back()->withInput()->withErrors(['email' => 'These credentials do not match our records.']);
+        // return redirect()->back()->withInput()->withErrors(['email' => 'These credentials do not match our records.']);
+        return redirect()->back()->with('message', 'The email or password is incorrect, please try again!');
     }
 
     public function passwordReset(Request $request)
